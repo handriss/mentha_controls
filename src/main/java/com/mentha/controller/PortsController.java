@@ -19,6 +19,7 @@ public class PortsController {
 
     @Autowired
     public PortsController(PortsRepository portsRepository) {
+//        this.portsRepository = portsRepository;
         this.portsRepository = portsRepository;
     }
 
@@ -37,4 +38,5 @@ public class PortsController {
 
         return "list-data";
     }
+
 }
