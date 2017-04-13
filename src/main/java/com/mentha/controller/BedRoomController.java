@@ -1,13 +1,14 @@
 package com.mentha.controller;
 
+import com.mentha.model.Ports;
 import com.mentha.repository.PortsRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController("/bedroom")
+@Slf4j
+@RestController
+@RequestMapping("/bedroom")
 public class BedRoomController {
 
     private PortsRepository portsRepository;
@@ -17,9 +18,23 @@ public class BedRoomController {
         this.portsRepository = portsRepository;
     }
 
-    @RequestMapping(value = "/{deviceId}", method = RequestMethod.GET)
-    public String readStates(@PathVariable(value = "deviceId") String deviceId){
+    @GetMapping(value = "/{deviceId}")
+    public Ports readStates(@PathVariable(value = "deviceId") String deviceId){
 
-        return "";
+        Ports ports = portsRepository.findBynev(deviceId);
+
+        return ports;
     }
+
+    @PostMapping(value = "/{deviceId}/{value}")
+    public String writeStates(@PathVariable(value = "deviceId") String deviceId, @PathVariable(value = "value") Double value){
+
+        Ports ports = portsRepository.findBynev(deviceId);
+        ports.setAdat(value);
+        portsRepository.save(ports);
+
+        return "Successfully changed the value";
+
+    }
+
 }

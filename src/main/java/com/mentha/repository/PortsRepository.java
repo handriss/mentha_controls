@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PortsRepository extends JpaRepository<Ports, Long> {
 
-//    User findByEmail(String email);
+    Ports findById(Long id);
+
+    Ports findBynev(String name);
 
 }
