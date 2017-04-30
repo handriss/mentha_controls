@@ -30,7 +30,7 @@ public class BedRoomController {
     public String writeStates(@PathVariable(value = "deviceId") String deviceId, @PathVariable(value = "value") Double value){
 
         Ports ports = portsRepository.findBynev(deviceId);
-        ports.setChange(true);
+//        ports.setChange(true);
         ports.setAdat(value);
         portsRepository.save(ports);
 

@@ -1,17 +1,18 @@
 package com.mentha.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Getter
-@Setter
-@ToString
+//@Setter
+//@ToString
 @Entity
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Builder
 public class Ports {
 
     private String nev;
@@ -24,6 +25,7 @@ public class Ports {
     @GeneratedValue
     private Long id;
     private java.sql.Timestamp ido;
+    private Boolean change;
     private String icon0;
     private Long value1;
     private Long min1;
@@ -44,9 +46,10 @@ public class Ports {
     private Long x3;
     private Long y3;
 
-    private Boolean change;
-
     public Ports() {
-        this.change = false;
+    }
+
+    public void setAdat(Double adat){
+        this.adat = adat;
     }
 }
