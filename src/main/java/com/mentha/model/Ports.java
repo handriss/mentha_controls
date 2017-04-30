@@ -7,14 +7,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Getter
-//@Setter
-//@ToString
+@Setter
+@ToString
 @Entity
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Ports {
-
     private String nev;
     private Double adat;
     private String miez;
@@ -25,7 +24,7 @@ public class Ports {
     @GeneratedValue
     private Long id;
     private java.sql.Timestamp ido;
-    private Boolean change;
+    private Boolean change1;
     private String icon0;
     private Long value1;
     private Long min1;
@@ -45,9 +44,6 @@ public class Ports {
     private String icon3;
     private Long x3;
     private Long y3;
-
-    public Ports() {
-    }
 
     public void setAdat(Double adat){
         this.adat = adat;

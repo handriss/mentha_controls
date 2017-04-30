@@ -6,7 +6,7 @@ CREATE TABLE `ports` (
   `SZOVEG` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'if type is S, text is here',
   `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
   `IDO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'yyyymmddhhmmss',
-  `CHANGE` BOOLEAN DEFAULT FALSE COMMENT 'show if the row has been modified',
+  `CHANGE1` BOOLEAN DEFAULT FALSE COMMENT 'show if the row has been modified',
   `icon0` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'instr_error.gif' COMMENT 'data: icon for not definied data',
   `value1` int(11) NOT NULL DEFAULT '0' COMMENT 'data: value1',
   `min1` int(11) NOT NULL COMMENT 'data is value1 if higher',
