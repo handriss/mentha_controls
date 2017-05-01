@@ -1,7 +1,9 @@
 package com.mentha.controller;
 
 import com.mentha.model.Ports;
+import com.mentha.model.TransferObject;
 import com.mentha.repository.PortsRepository;
+import com.mentha.service.PortsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,10 +17,12 @@ import java.util.Objects;
 public class WidgetController {
 
     private PortsRepository portsRepository;
+    private PortsService portsService;
 
     @Autowired
-    public WidgetController(PortsRepository portsRepository) {
+    public WidgetController(PortsRepository portsRepository, PortsService portsService) {
         this.portsRepository = portsRepository;
+        this.portsService = portsService;
     }
 
     @GetMapping(value = "/{deviceId}")
@@ -49,9 +53,10 @@ public class WidgetController {
     }
 
     @GetMapping(value = "/getBulkdata")
-    public List<Ports> getBulkData(){
+    public List<TransferObject> getBulkData(){
 
-        return portsRepository.findByroomTypeIsNotNull();
+        return portsService.convertPortsToTransferObject(portsRepository.findByroomTypeIsNotNull());
+
     }
 
 }
