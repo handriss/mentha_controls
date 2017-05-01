@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @RestController
@@ -29,10 +30,16 @@ public class WidgetController {
     }
 
     @PostMapping(value = "/{deviceId}/{value}")
-    public String writeStates(@PathVariable(value = "deviceId") String deviceId, @PathVariable(value = "value") Double value){
+    public String writeStates(@PathVariable(value = "deviceId") String deviceId, @PathVariable(value = "value") String value){
 
         Ports ports = portsRepository.findBynev(deviceId);
-        ports.setAdat(value);
+
+        if(Objects.equals(value, "ON")){
+            ports.setAdat(ports.getOnValue());
+        }else if(Objects.equals(value, "OFF")){
+            ports.setAdat(ports.getOffValue());
+        }
+
         ports.setChange1(true);
 
         portsRepository.save(ports);
