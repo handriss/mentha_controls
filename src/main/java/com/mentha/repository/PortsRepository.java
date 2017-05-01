@@ -15,4 +15,6 @@ public interface PortsRepository extends JpaRepository<Ports, Long> {
 
     List<Ports> findByroomTypeIsNotNull();
 
+    List<Ports> findByroomType(String roomName);
+
 }
