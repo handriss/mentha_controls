@@ -63,7 +63,50 @@ public class DataLoader {
         setOnePorts("p_ve3", RoomTypeEnum.LivingRoom, 0.0d, 80.0d);
         setOnePorts("p_oli_40", RoomTypeEnum.LivingRoom, 0.0d, 80.0d);
 
+        //        Upstairs values
+        setOnePorts("p_oli_101", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_102", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_103", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_104", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_105", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_108", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_109", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_k101", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_k101b", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_k102", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_110", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_112", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_113", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("ev_zsmk1", RoomTypeEnum.Upstairs, 0.0d, 1.0d);
+        setOnePorts("ev_zsmk2", RoomTypeEnum.Upstairs, 0.0d, 1.0d);
+        setOnePorts("evf_zsmk1", RoomTypeEnum.Upstairs, 0.0d, 1.0d);
+        setOnePorts("ed_zsmk1", RoomTypeEnum.Upstairs, 0.0d, 1.0d);
+        setOnePorts("p_od_tsz3", RoomTypeEnum.Upstairs, 0.0d, 1.0d);
+
+
+        //        Garage values
+        setOnePorts("p_oli_k7", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_k7b", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_k11", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_k12", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_7", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_8", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_10", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_41", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_40", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_42", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_43", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_44", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_45", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_oli_46", RoomTypeEnum.Garage, 0.0d, 80.0d);
+        setOnePorts("p_ve3", RoomTypeEnum.Garage, 0.0d, 80.0d);
+
     }
+
+
+
+
+
 
     private void setOnePorts(String portsName, RoomTypeEnum roomTypeEnum, Double min, Double max){
         Ports ports = portsRepository.findBynev(portsName);
