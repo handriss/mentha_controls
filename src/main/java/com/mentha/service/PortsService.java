@@ -5,6 +5,7 @@ import com.mentha.model.TransferObject;
 import com.mentha.model.enums.RoomTypeEnum;
 import com.mentha.repository.PortsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -33,18 +34,21 @@ public class PortsService {
         List<TransferObject> transferObjects = new ArrayList<>();
 
         for(Ports port : portses){
-
-            TransferObject transferObject = new TransferObject();
-            transferObject.setName(port.getNev());
-
-            Boolean status = Objects.equals(port.getAdat(), port.getOnValue());
-            transferObject.setWidgetStatus(status);
-
-            transferObject.setRoomTypeEnum(port.getRoomType());
-
+            TransferObject transferObject =convertPortsToTransferObject(port);
             transferObjects.add(transferObject);
         }
 
         return transferObjects;
+    }
+
+    public TransferObject convertPortsToTransferObject(Ports ports){
+        TransferObject transferObject = new TransferObject();
+        transferObject.setName(ports.getNev());
+        transferObject.setRoomTypeEnum(ports.getRoomType());
+
+        Boolean status = Objects.equals(ports.getAdat(), ports.getOnValue());
+        transferObject.setWidgetStatus(status);
+
+        return transferObject;
     }
 }

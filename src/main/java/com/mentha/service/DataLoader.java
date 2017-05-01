@@ -105,7 +105,7 @@ public class DataLoader {
         setOnePorts("p_oli_k101", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
         setOnePorts("p_oli_k101b", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
         setOnePorts("p_oli_k102", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
-        setOnePorts("p_oli_110", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
+        setOnePorts("p_oli_k110", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
         setOnePorts("p_oli_112", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
         setOnePorts("p_oli_113", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
         setOnePorts("ev_zsmk1", RoomTypeEnum.Upstairs, 0.0d, 1.0d);

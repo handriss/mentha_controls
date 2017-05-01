@@ -26,11 +26,12 @@ public class WidgetController {
     }
 
     @GetMapping(value = "/{deviceId}")
-    public Ports readStates(@PathVariable(value = "deviceId") String deviceId){
+    public TransferObject readStates(@PathVariable(value = "deviceId") String deviceId){
 
         Ports ports = portsRepository.findBynev(deviceId);
+        TransferObject resultObject = portsService.convertPortsToTransferObject(ports);
 
-        return ports;
+        return resultObject;
     }
 
     @PostMapping(value = "/{deviceId}/{value}")
