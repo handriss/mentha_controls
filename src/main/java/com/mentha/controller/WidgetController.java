@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/bedroom")
-public class BedRoomController {
+@RequestMapping("/widget")
+public class WidgetController {
 
     private PortsRepository portsRepository;
 
     @Autowired
-    public BedRoomController(PortsRepository portsRepository) {
+    public WidgetController(PortsRepository portsRepository) {
         this.portsRepository = portsRepository;
     }
 
