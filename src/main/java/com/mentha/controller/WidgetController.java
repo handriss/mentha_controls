@@ -42,6 +42,8 @@ public class WidgetController {
             ports.setAdat(ports.getOnValue());
         }else if(Objects.equals(value, "OFF")){
             ports.setAdat(ports.getOffValue());
+        }else{
+            return "Please specify ON or OFF as an argument.";
         }
 
         ports.setChange1(true);
