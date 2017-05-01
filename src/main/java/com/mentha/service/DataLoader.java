@@ -63,7 +63,7 @@ public class DataLoader {
         setOnePorts("p_ve3", RoomTypeEnum.LivingRoom, 0.0d, 80.0d);
         setOnePorts("p_oli_40", RoomTypeEnum.LivingRoom, 0.0d, 80.0d);
 
-
+        log.info(portsRepository.findByroomTypeIsNotNull().toString());
 
     }
 
