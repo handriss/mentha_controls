@@ -1,10 +1,9 @@
 package com.mentha.model;
 
+import com.mentha.model.enums.RoomTypeEnum;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -14,6 +13,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Builder
 public class Ports {
+
     private String nev;
     private Double adat;
     private String miez;
@@ -45,7 +45,19 @@ public class Ports {
     private Long x3;
     private Long y3;
 
+    @Enumerated
+    private RoomTypeEnum roomType = RoomTypeEnum.No_Room;
+
+    private Double onValue;
+    private Double offValue;
+
     public void setAdat(Double adat){
         this.adat = adat;
+    }
+
+    public void setPriorData(RoomTypeEnum roomType, Double offValue, Double onValue){
+        this.roomType = roomType;
+        this.offValue = offValue;
+        this.onValue = onValue;
     }
 }

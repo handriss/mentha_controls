@@ -39,4 +39,9 @@ public class BedRoomController {
 
     }
 
+//    @GetMapping(value = "/get-all-data")
+//    public List<Ports> readStatesInBulk(){
+//        portsRepository.findAll();
+//    }
+
 }

@@ -26,6 +26,8 @@ CREATE TABLE `ports` (
   `icon3` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'icon: value3' COMMENT 'icon: value3',
   `x3` int(11) NOT NULL DEFAULT '30' COMMENT 'x coordinate for value3 on screen',
   `y3` int(11) NOT NULL DEFAULT '30' COMMENT 'y coordinate for value3 on screen',
+  `offvalue` float(8,2) NOT NULL DEFAULT '0.00' COMMENT 'Adat field when widget is off',
+  `onvalue` float(8,2) NOT NULL DEFAULT '-1.00' COMMENT 'Adat field when widget is on',
   PRIMARY KEY (`ID`),
   KEY `ID` (`ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1634 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='ports for apps or handler'
