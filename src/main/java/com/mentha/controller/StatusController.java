@@ -18,9 +18,8 @@ public class StatusController {
     }
 
     @GetMapping
-    public ResponseEntity checkStatus(){
-
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    public String checkStatus(){
+        return "App is running!";
     }
 
     @GetMapping(value = "/nullChangeFields")
