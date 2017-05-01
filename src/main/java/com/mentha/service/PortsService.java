@@ -33,11 +33,15 @@ public class PortsService {
         List<TransferObject> transferObjects = new ArrayList<>();
 
         for(Ports port : portses){
+
             TransferObject transferObject = new TransferObject();
             transferObject.setName(port.getNev());
 
             Boolean status = Objects.equals(port.getAdat(), port.getOnValue());
             transferObject.setWidgetStatus(status);
+
+            transferObject.setRoomTypeEnum(port.getRoomType());
+
             transferObjects.add(transferObject);
         }
 
