@@ -22,3 +22,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/pom.xml
+/src/main/resources/application-development-local.properties
+/src/main/resources/application.properties
