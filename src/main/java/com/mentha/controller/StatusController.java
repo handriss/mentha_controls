@@ -1,32 +1,24 @@
 package com.mentha.controller;
 
+import com.mentha.repository.PortsRepository;
 import com.mentha.service.PortsService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
+@RequestMapping("/status")
 public class StatusController {
 
+    private PortsRepository portsRepository;
     private PortsService portsService;
 
     @Autowired
-    public StatusController(PortsService portsService) {
+    public StatusController(PortsRepository portsRepository, PortsService portsService) {
+        this.portsRepository = portsRepository;
         this.portsService = portsService;
     }
 
-    @GetMapping
-    public String checkStatus(){
-        return "App is running!";
-    }
-
-    @GetMapping(value = "/nullChangeFields")
-    public String nullChangeFields(){
-
-        portsService.nullChangeFields();
-
-        return "All change fields has been set to 0.";
-    }
 }

@@ -2,6 +2,7 @@ package com.mentha.controller;
 
 import com.mentha.model.Ports;
 import com.mentha.model.TransferObject;
+import com.mentha.model.enums.RoomTypeEnum;
 import com.mentha.repository.PortsRepository;
 import com.mentha.service.PortsService;
 import lombok.extern.slf4j.Slf4j;
@@ -28,7 +29,7 @@ public class WidgetController {
     @GetMapping(value = "/{deviceId}")
     public TransferObject readStates(@PathVariable(value = "deviceId") String deviceId){
 
-        Ports ports = portsRepository.findBynev(deviceId);
+        Ports ports = portsRepository.findByNev(deviceId);
         TransferObject resultObject = portsService.convertPortsToTransferObject(ports);
 
         return resultObject;
@@ -37,7 +38,7 @@ public class WidgetController {
     @PostMapping(value = "/{deviceId}/{value}")
     public String writeStates(@PathVariable(value = "deviceId") String deviceId, @PathVariable(value = "value") String value){
 
-        Ports ports = portsRepository.findBynev(deviceId);
+        Ports ports = portsRepository.findByNev(deviceId);
 
         if(Objects.equals(value, "ON")){
             ports.setAdat(ports.getOnValue());
@@ -58,8 +59,14 @@ public class WidgetController {
     @GetMapping(value = "/getBulkdata")
     public List<TransferObject> getBulkData(){
 
-        return portsService.convertPortsToTransferObject(portsRepository.findByroomTypeIsNotNull());
+        return portsService.convertPortsToTransferObject(portsRepository.findByRoomTypeIsNotNull());
 
+    }
+
+    @GetMapping(value = "/getBulkdata/{RoomType}")
+    public List<TransferObject> getBulkDataAccordingRoomType(@PathVariable(value = "RoomType") String roomType){
+        RoomTypeEnum roomTypeEnum = RoomTypeEnum.valueOf(roomType);
+        return portsService.convertPortsToTransferObject(portsRepository.findByRoomType(roomTypeEnum));
     }
 
 }

@@ -5,7 +5,6 @@ import com.mentha.model.TransferObject;
 import com.mentha.model.enums.RoomTypeEnum;
 import com.mentha.repository.PortsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class PortsService {
     }
 
     public void nullChangeFields(){
-        List<Ports> ports = portsRepository.findByroomTypeIsNotNull();
+        List<Ports> ports = portsRepository.findByRoomTypeIsNotNull();
         for(Ports port : ports){
             port.setRoomType(RoomTypeEnum.No_Room);
             portsRepository.save(port);

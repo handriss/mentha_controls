@@ -5,7 +5,7 @@ public enum RoomTypeEnum {
 
     No_Room,
     LivingRoom,
-    Bedroom,
+    BedRoom,
     Upstairs,
     Garage,
     Utilities

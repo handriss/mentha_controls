@@ -11,10 +11,10 @@ public interface PortsRepository extends JpaRepository<Ports, Long> {
 
     Ports findById(Long id);
 
-    Ports findBynev(String name);
+    Ports findByNev(String name);
 
-    List<Ports> findByroomTypeIsNotNull();
+    List<Ports> findByRoomTypeIsNotNull();
 
-    List<Ports> findByroomType(String roomName);
+    List<Ports> findByRoomType(Enum roomName);
 
 }

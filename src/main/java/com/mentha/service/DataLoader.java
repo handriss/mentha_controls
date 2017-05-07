@@ -63,36 +63,36 @@ public class DataLoader {
         setOnePorts("p_ve3", RoomTypeEnum.LivingRoom, 0.0d, 80.0d);
         setOnePorts("p_oli_40", RoomTypeEnum.LivingRoom, 0.0d, 80.0d);
 
-//        Bedroom values
-        setOnePorts("p_oli_24", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_k2b", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_25", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_26a", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_26b", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_k9", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_k8", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_27", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("fh_zsmk3", RoomTypeEnum.Bedroom, 0.0d, 1.0d);
-        setOnePorts("ff_zsmk1", RoomTypeEnum.Bedroom, 0.0d, 1.0d);
-        setOnePorts("p_oli_30", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_29", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_32", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_33", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_34", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_od_tsz1", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_31", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_ve1", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("fgyf_zsmk1", RoomTypeEnum.Bedroom, 0.0d, 1.0d);
-        setOnePorts("p_oli_39", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_22", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_38", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_21", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_23", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_37", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_od_tsz2", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_36", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_oli_35", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
-        setOnePorts("p_ve2", RoomTypeEnum.Bedroom, 0.0d, 80.0d);
+//        BedRoom values
+        setOnePorts("p_oli_24", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_k2b", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_25", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_26a", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_26b", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_k9", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_k8", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_27", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("fh_zsmk3", RoomTypeEnum.BedRoom, 0.0d, 1.0d);
+        setOnePorts("ff_zsmk1", RoomTypeEnum.BedRoom, 0.0d, 1.0d);
+        setOnePorts("p_oli_30", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_29", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_32", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_33", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_34", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_od_tsz1", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_31", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_ve1", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("fgyf_zsmk1", RoomTypeEnum.BedRoom, 0.0d, 1.0d);
+        setOnePorts("p_oli_39", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_22", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_38", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_21", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_23", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_37", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_od_tsz2", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_36", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_oli_35", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
+        setOnePorts("p_ve2", RoomTypeEnum.BedRoom, 0.0d, 80.0d);
 
         //        Upstairs values
         setOnePorts("p_oli_101", RoomTypeEnum.Upstairs, 0.0d, 80.0d);
@@ -135,7 +135,7 @@ public class DataLoader {
     }
 
     private void setOnePorts(String portsName, RoomTypeEnum roomTypeEnum, Double min, Double max){
-        Ports ports = portsRepository.findBynev(portsName);
+        Ports ports = portsRepository.findByNev(portsName);
         ports.setPriorData(roomTypeEnum, min, max);
         portsRepository.save(ports);
     }
